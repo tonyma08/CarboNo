@@ -32,6 +32,7 @@
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 12;
 		color: #000000;
+		padding: 10px
 	}
 	p {
 		font-family: Arial, Helvetica, sans-serif;
@@ -50,7 +51,16 @@
 	</div>
 	<div class = "column left">
 		<h2>Your Carbon Emissions</h2>
-		<p>For Period of:</p>
+		<form>
+			For The Period From: 
+			<input type="date" name="start-day">
+			 To:
+			<input type="date" name="end-day">
+		</form>
+
+		<script type="text/javascript">
+			$( "#datepicker" ).datepicker();
+		</script>
 	</div>
 	<div class = "column right">
 		<h2>Your Daily Tip For Saving the World</h2>
