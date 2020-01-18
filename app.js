@@ -19,18 +19,18 @@ function genDailyTipOrder(messageCount) {
 window.onload = function() {
 	console.log("Hi");
 	messages = ["One", "Two", "Three", "Four", "Five", "Six", "Seven"];
-	
-	// Start over if the amount of tips changes
-	if(messages.length !== parseInt(localStorage.getItem('daily-tip-order').split(" ").length)) {
-		localStorage.removeItem('daily-tip-index');
-		localStorage.removeItem('daily-tip-order');
-	}
 
+	// If no order (every tip was seen already or first run), restart
+	if(localStorage.getItem('daily-tip-order') === null) {
+		var order = genDailyTipOrder(messages.length);
+		localStorage.setItem('daily-tip-order', order.join(" "));
+	}
+	
 	// Initialize for first run
 	if(localStorage.getItem('daily-tip-index') === null) {
 		localStorage.setItem('daily-tip-index', 0);
 	}
-	
+
 	else {
 		var newIndex = parseInt(localStorage.getItem('daily-tip-index')) + 1;
 		// After seeing every message, discard the order
@@ -43,10 +43,10 @@ window.onload = function() {
 		}
 	}
 	
-	// If no order (every tip was seen already or first run), restart
-	if(localStorage.getItem('daily-tip-order') === null) {
-		var order = genDailyTipOrder(messages.length);
-		localStorage.setItem('daily-tip-order', order.join(" "));
+	// Start over if the amount of tips changes
+	if(messages.length !== parseInt(localStorage.getItem('daily-tip-order').split(" ").length)) {
+		localStorage.removeItem('daily-tip-index');
+		localStorage.removeItem('daily-tip-order');
 	}
 	
 	// Read order and show the next tip from there
