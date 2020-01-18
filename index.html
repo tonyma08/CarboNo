@@ -4,7 +4,62 @@
 		<title>CarboNo</title>
 		<script src="app.js"></script>
 	</head>
+	<style>
+	.header {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 30;
+		padding: 40px;
+		background-image: url(header-image.jpg);
+		background-color: #000000;
+		text-align: center;
+		color: #ffffff;
+	}
+	.column {
+		float: left;
+	}
+	.column.left {
+		width: 75%;
+	}
+	.column.right {
+		width: 25%;
+	}
+	@media screen and (max-width: 600px) {
+		.column.left, .column.right {
+			width: 100%
+		}
+	}
+	h2 {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12;
+		color: #000000;
+	}
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 10;
+		color: #000000;
+	}
+	.footer{
+		text-align: center;
+	}
+
+	</style>
 	<body>
-		<div class="daily-tip"></div>
+	<div class = "header">
+		<h1>CarboNo Carbon Tracker</h1>
+		<p>Track Your Carbon Emissions With Ease</p>
+	</div>
+	<div class = "column left">
+		<h2>Your Carbon Emissions</h2>
+		<p>For Period of:</p>
+	</div>
+	<div class = "column right">
+		<h2>Your Daily Tip For Saving the World</h2>
+	<div class="daily-tip"></div>
+	</div>
+	
+	<div class = "footer">
+		<p>Header Image by Qingbao Meng on Unsplash</p>
+		<p>Copyright 2020. All Rights Reserved.</p>
+	</div>
 	</body>
 </html>
