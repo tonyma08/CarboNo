@@ -17,7 +17,6 @@ function genDailyTipOrder(messageCount) {
 }
 
 window.onload = function() {
-	console.log("Hi");
 	messages = ["One", "Two", "Three", "Four", "Five", "Six", "Seven"];
 
 	// If no order (every tip was seen already or first run), restart
@@ -36,7 +35,8 @@ window.onload = function() {
 		// After seeing every message, discard the order
 		if(newIndex == messages.length) {
 			localStorage.setItem('daily-tip-index', 0);
-			localStorage.removeItem('daily-tip-order');
+			var order = genDailyTipOrder(messages.length);
+			localStorage.setItem('daily-tip-order', order.join(" "));
 		}
 		else {
 			localStorage.setItem('daily-tip-index', newIndex);
