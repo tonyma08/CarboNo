@@ -31,15 +31,39 @@
         </form>
         <h2>How far did you travel?</h2>
         <form action="" class="travel-distance">
-            <input type="number" min="0"> miles
+            <input type="number" min="0" name="travel-distance"> miles
         </form>
         <br>
         <form action="">
-            <input type="Submit" value="Add trip" name="travel-submit">
+            <input type="button" value="Add trip" name="travel-submit">
         </form>
     </div>
     <div class="submission-form1 submission-electricity">
-        <form action="" class="electricity-amount"></form>
+        <select>
+            <option value="01" name="electricity-month">January</option>
+            <option value="02" name="electricity-month">February</option>
+            <option value="03" name="electricity-month">March</option>
+            <option value="04" name="electricity-month">April</option>
+            <option value="05" name="electricity-month">May</option>
+            <option value="06" name="electricity-month">June</option>
+            <option value="07" name="electricity-month">July</option>
+            <option value="08" name="electricity-month">August</option>
+            <option value="09" name="electricity-month">September</option>
+            <option value="10" name="electricity-month">October</option>
+            <option value="11" name="electricity-month">November</option>
+            <option value="12" name="electricity-month">December</option>
+        </select>
+        <form action="" class="electricity-year">
+            <input type="number" min="1" name="electricity-year">
+        </form>
+        <h2>How much electricity did you use this month?</h2>
+        <form action="" class="electricity-amount">
+            <input type="number" min="1" name="electricity-amount"> kWh
+        </form>
+        <br>
+        <form action="">
+            <input type="button" value="Add data" name="electricity-submit">
+        </form>        
     </div>
 </div>
 {% endblock %}
