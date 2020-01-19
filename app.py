@@ -7,11 +7,11 @@ app = Flask(__name__)
 def render_home():
     return render_template('index.html')
 
-"""
+
 @app.route('/about')
-def render_about(about):
-    return render_template(about.html)
-"""
+def render_about():
+    return render_template('about.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
