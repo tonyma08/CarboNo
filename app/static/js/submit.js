@@ -1,16 +1,3 @@
-var getStored = function(name) {
-    if(localStorage.getItem(name) !== null) {
-        return JSON.parse(localStorage.getItem(name));
-    }
-    else {
-        return {};
-    }
-};
-
-var storeJSON = function(name, data) {
-    localStorage.setItem(name, JSON.stringify(data));
-};
-
 function getDaysInMonth(month, year) {
     if(month == 2) {
         return year % 4 == 0 && (!(year % 100 == 0) || year % 400 == 0) ? 29 : 28;

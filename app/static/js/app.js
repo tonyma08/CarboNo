@@ -16,7 +16,7 @@ function genDailyTipOrder(messageCount) {
 	return order;
 }
 
-window.onload = function() {
+$(document).ready(function() {
 	messages = [
 
 ["Change five lights", "Replace your five most frequently used <a href=\"https://www.energystar.gov/index.cfm?c=fixtures.pr_light_fixtures\">light fixtures</a> or the <a href=\"https://www.energystar.gov/products/lighting_fans/light_bulbs\">lightbulbs</a> in them with <a href=\"https://www.energystar.gov/\">ENERGY STAR</a>-qualified products and you will help the environment while saving $70 a year on energy bills. <a href=\"https://www.energystar.gov/\">ENERGY STAR</a> lighting provides bright, warm light; generates 75% less heat; uses about 75% less energy than standard lighting; and lasts from 10 to 50 times longer."],
@@ -83,4 +83,15 @@ window.onload = function() {
 	tip = messages[tipNumber];
 	document.getElementsByClassName("tip-title")[0].innerHTML = tip[0];
     document.getElementsByClassName("tip-text")[0].innerHTML = tip[1];
-};
+    
+    $('input[name="start-day"]').change(function() {
+        var emissionHistory = getStored('emission-history');
+        var emissionDates = getStored('emission-dates');
+        var dateVal = {};
+        for(var i = 0; i < emissionDates[$(this).val()].length; i++) {
+            var id = emissionDates[$(this).val()][i];
+            dateVal[id] = emissionHistory[id];
+        }
+        $('input[name="json"]').val(JSON.stringify(dateVal));
+    });
+});
