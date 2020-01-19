@@ -3,13 +3,20 @@
 	<head>
 		<title>CarboNo - Home</title>
 		<script src="app.js"></script>
-		<link rel="stylesheet" type="text/css" href="../static/homepagestyle.css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/common.css') }}">		
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/homepagestyle.css') }}">
 	</head>
 	
 	<body>
 		
 		<div class = "header">
-			<h2>CarboNo</h2>
+			<div class="page_title">CarboNo</div>
+			<ul class="navbar">
+				<li>Home</li>
+				<li>About</li>
+				<li>Track</li>
+				<li>Credits</li>
+			</ul>
 		</div>
 		
 		<div class = "title">

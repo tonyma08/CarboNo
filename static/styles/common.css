@@ -1,19 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap');
+
 .header {
     overflow: hidden;
     margin: 0px;
     font-family: 'Work Sans', sans-serif;
     font-weight: Medium;
 	font-size: 20px;
-    padding: 5px;
-    padding-left: 20px;
-	background-color: #ffffff;
+    padding: 16px;
+	background-color: #222222;
 	text-align: left;
-    color: #000000;
+    color: #ffffff;
     
+}
+
+.page_title {
+	float: left;
 }
 
 .navbar {
 	list-style-type: none;
+	float: right;
 }
 .navbar li {
 	display: inline-block;
