@@ -14,5 +14,9 @@ def render_about():
 def render_view():
     return render_template('viewdata.html')
 
+@app.route('/submit')
+def submit_view():
+    return render_template('submit.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
