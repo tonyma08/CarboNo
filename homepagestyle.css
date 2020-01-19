@@ -18,15 +18,17 @@
     overflow: hidden;
     margin: 0px;
     font-family: 'Work Sans', sans-serif;
-    font-weight: Medium;
+    font-weight: Semi-Bold;
 	font-size: 30;
-    padding: 5px;
+    padding: 2px;
     padding-left: 20px;
 	background-color: #ffffff;
 	text-align: left;
     color: #000000;
     
+    
 }
+
 .title {
     overflow: hidden;
     margin: 0px;
@@ -55,7 +57,7 @@ body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
     background-image: url(header-image.jpg);
-    opacity: ;
+    background-size: cover
 }
 p {
 	font-family: 'Roboto', sans-serif;
