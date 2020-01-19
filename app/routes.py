@@ -4,7 +4,7 @@ from app.forms import LoginForm
 
 @app.route('/')
 def render_index():
-    return render_template('index.html')
+    return render_template('index.html', is_authentiated=current_user.is_authenticated)
 
 @app.route('/about')
 def render_about():
