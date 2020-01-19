@@ -39,6 +39,7 @@ $(document).ready(function() {
         }
         storeJSON('emission-history', emissionHistory);
         storeJSON('emission-dates', emissionDates);
+        $('input:not([type="button"]').val("");
         location.reload();
     });
     
@@ -70,6 +71,7 @@ $(document).ready(function() {
         }
         storeJSON('emission-history', emissionHistory);
         storeJSON('emission-dates', emissionDates);
+        $('input:not([type="button"]').val("");
         location.reload();        
     });
 });
