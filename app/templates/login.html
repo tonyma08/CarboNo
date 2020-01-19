@@ -1,7 +1,12 @@
 {% extends "base.html" %}
-
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/buttonstyle.css') }}">
+{% endblock %}	
 {% block content %}
+<div class="title">
     <h1>Sign In</h1>
+</div>
+<div class = "strip">
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
@@ -15,4 +20,5 @@
         <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
         <p>{{ form.submit() }}</p>
     </form>
+</div>
 {% endblock %}
