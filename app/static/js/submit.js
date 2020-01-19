@@ -39,6 +39,7 @@ $(document).ready(function() {
         }
         storeJSON('emission-history', emissionHistory);
         storeJSON('emission-dates', emissionDates);
+        location.reload();
     });
     
     $("input[name='electricity-submit']").click(function() {
@@ -69,5 +70,6 @@ $(document).ready(function() {
         }
         storeJSON('emission-history', emissionHistory);
         storeJSON('emission-dates', emissionDates);
+        location.reload();        
     });
 });
