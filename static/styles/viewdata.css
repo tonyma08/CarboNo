@@ -12,3 +12,8 @@
 		width: 100%;
 	}
 }
+
+.tip-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
