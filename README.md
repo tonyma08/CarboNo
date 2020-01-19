@@ -6,7 +6,5 @@ of this data through the website's View page.
 The website keeps a log of the user's previous entries by reading the user's cookies. 
 All data is locally stored on the user's machine. 
 
-This project is hosted on Microsoft Azure.
-The front-end is built using HTML and CSS.
-The back-end is built using Python and the packages Flask and SQLAlchemy
+This project is hosted on Microsoft Azure; the front-end is built using HTML and CSS; and the back-end is built using Python and the packages Flask and SQLAlchemy
 
