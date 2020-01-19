@@ -20,7 +20,13 @@
 .navbar {
 	list-style-type: none;
 	float: right;
+	margin: 0;
 }
+.header a, .navbar a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
 .navbar li {
 	display: inline-block;
 	padding: 0 16px;
