@@ -54,7 +54,8 @@ h3 {
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
-    background-image: url(header-image.jpg);
+    background-image: url(../header-image.jpg);
+    background-color: darkgreen
     opacity: ;
 }
 p {
