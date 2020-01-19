@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block head %}
-	<script src="app.js"></script>
+	<script src="{{ url_for('static', filename='js/app.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/viewdata.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/buttonstyle.css') }}">
 {% endblock %}	
