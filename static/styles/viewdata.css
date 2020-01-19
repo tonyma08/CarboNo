@@ -1,0 +1,22 @@
+.column {
+	float: left;
+}
+.column.left {
+    width: 75%;
+}
+.column.right {
+    width: 25%;
+}
+@media screen and (max-width: 600px) {
+	.column.left, .column.right {
+		width: 100%;
+	}
+}
+
+.strip {
+    overflow: hidden;
+    margin: 0;
+    padding: 30px;
+    color: #000000;
+    background-color: #ffffff;
+}

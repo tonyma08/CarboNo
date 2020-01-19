@@ -1,35 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>CarboNo - Home</title>
-		<script src="app.js"></script>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/common.css') }}">		
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/homepagestyle.css') }}">
-	</head>
-	
-	<body>
-		
-		<div class="header">
-			<div class="page_title"><a href="/">CarboNo</a></div>
-			<ul class="navbar">
-				<li><a href="/about">About</a></li>
-				<li><a href="/viewdata">View</a></li>
-				<li><a href="/submit">Submit</a></li>
-			</ul>
-		</div>
-		
-		<div class="title">
+{% extends "base.html" %}
+{% block head %}
+{% endblock %}	
+{% block content %}
+	<div class="title">
 		<h1>CarboNo Carbon Tracker</h1>
 		<h2>A Simpler Way To Track Your Carbon Footprint</h2>
 		<h2>Join the Movement</h2>
-		</div>
-
-		
-		<div class="footer">
-			<p>Background Image by <a href= "https://unsplash.com/@whale">Matthew Smith</a> on Unsplash</p>
-			<p>Made at CruzHacks 2020</p>
-			<p>Copyright &copy; 2020 by The CarboNo Team. All Rights Reserved.</p>
-		</div>
-	</body>
-
-</html>
+	</div>
+{% endblock %}

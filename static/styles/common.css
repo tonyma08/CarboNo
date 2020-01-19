@@ -13,6 +13,17 @@
     
 }
 
+.title {
+    overflow: hidden;
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: Medium;
+	font-size: 25px;
+    padding: 30px;
+	text-align: center;
+    color: #ffffff;
+}
+
 .page_title {
 	float: left;
 }
@@ -30,4 +41,26 @@
 .navbar li {
 	display: inline-block;
 	padding: 0 16px;
+}
+
+h3 {
+    font-family: 'Work Sans', sans-serif;
+	font-size: 30px;
+	color: #ffffff;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("/static/header-image.jpg");
+	background-size: cover;
+}
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 10;
+	color: #000000;
+}
+.footer{
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
 }
