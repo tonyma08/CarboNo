@@ -3,14 +3,25 @@
 .header {
     overflow: hidden;
     margin: 0px;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: Medium;
+    font-weight: medium;
 	font-size: 20px;
+	text-align: left;	
+}
+
+.header, .footer {
+    font-family: 'Work Sans', sans-serif;	
     padding: 16px;
 	background-color: #222222;
-	text-align: left;
     color: #ffffff;
-    
+}
+
+.footer {
+	text-align: center;
+}
+
+.footer a {
+	color: #ffffff;
+	text-decorate: underline;
 }
 
 .title {
@@ -53,14 +64,22 @@ body {
     font-family: 'Roboto', sans-serif;
     background-image: url("/static/header-image.jpg");
 	background-size: cover;
+	font-size: 14px;
 }
 p {
 	font-family: 'Roboto', sans-serif;
-	font-size: 10;
-	color: #000000;
 }
-.footer{
-    text-align: center;
-    background-color: #ffffff;
-    padding: 30px;
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
 }
