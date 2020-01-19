@@ -55,8 +55,8 @@ body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
     background-image: url(../header-image.jpg);
-    background-color: darkgreen
-    opacity: ;
+    background-color: darkgreen;
+    background-size: cover;
 }
 p {
 	font-family: 'Roboto', sans-serif;
