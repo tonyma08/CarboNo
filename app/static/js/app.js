@@ -84,7 +84,7 @@ $(document).ready(function() {
 	document.getElementsByClassName("tip-title")[0].innerHTML = tip[0];
     document.getElementsByClassName("tip-text")[0].innerHTML = tip[1];
     
-    $('input[name="start-day"]').change(function() {
+    $('input[name="day"]').change(function() {
         var emissionHistory = getStored('emission-history');
         var emissionDates = getStored('emission-dates');
         var dateVal = {};
