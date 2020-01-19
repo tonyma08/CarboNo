@@ -20,25 +20,25 @@
                     <input type="submit">
                 </form>
                 <div class="chart-container">
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <canvas id="chart-compare" width="400" height="400"></canvas>
 <script>
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = document.getElementById('chart-compare').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['You', 'State average', 'National average'],
         datasets: [{
             label: 'Pounds of CO₂',
-            data: [5, 12, 19],
+            data: [30, 51, 89],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
+                'rgba(27, 237, 24, 0.5)',
+                'rgba(43, 63, 214, 0.5)',
+                'rgba(255, 217, 0, 0.5)'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
+                'rgba(27, 237, 24, 1)',
+                'rgba(43, 63, 214, 1)',
+                'rgba(255, 217, 0, 1)'
             ],
             borderWidth: 1
         }]
@@ -58,6 +58,57 @@ myChart.canvas.parentNode.style.height = '400px';
 myChart.canvas.parentNode.style.width = '400px';
 </script>
             </div>
+            <br><br>
+                <div class="chart-container">
+                <canvas id="chart-breakdown" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('chart-breakdown').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['You'],
+        datasets: [{
+            label: 'Travel',
+            data: [30],
+            backgroundColor: [
+                'rgba(237, 162, 24, 0.5)',
+            ],
+            borderColor: [
+                'rgba(237, 162, 24, 1)',
+            ],
+            borderWidth: 1
+        },
+        {
+            label: 'Electricity',
+            data: [30],
+            backgroundColor: [
+                'rgba(247, 244, 22, 0.5)',
+            ],
+            borderColor: [
+                'rgba(247, 244, 22, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+                stacked: true
+            }]
+        }
+    }
+});
+myChart.maintainAspectRatio = false;
+myChart.canvas.parentNode.style.height = '400px';
+myChart.canvas.parentNode.style.width = '400px';
+</script>
+            </div>            
             </div>
         
     
