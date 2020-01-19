@@ -83,3 +83,10 @@ body {
 .footer {
   flex-shrink: 0;
 }
+.strip {
+    overflow: hidden;
+    margin: 0;
+    padding: 30px;
+    color: #000000;
+    background-color: #ffffff;
+}
