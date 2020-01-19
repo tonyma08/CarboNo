@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
+@app.route('/')
 @app.route('/home')
 def render_home():
     return render_template('index.html')
@@ -12,6 +12,9 @@ def render_home():
 def render_about():
     return render_template('about.html')
 
+@app.route('/view')
+def render_view():
+    return render_template('viewdata.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
