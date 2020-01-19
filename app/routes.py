@@ -89,7 +89,7 @@ def callback():
     userinfo_response = requests.get(uri, headers=headers, data=body)
     
     if userinfo_response.json().get("email_verified"):
-        nique_id = userinfo_response.json()["sub"]
+        unique_id = userinfo_response.json()["sub"]
         users_email = userinfo_response.json()["email"]
         picture = userinfo_response.json()["picture"]
         users_name = userinfo_response.json()["given_name"]
@@ -113,4 +113,4 @@ def callback():
     return redirect(url_for("index"))
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, ssl_context="adhoc")
