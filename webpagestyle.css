@@ -27,17 +27,22 @@
     color: #000000;
     
 }
-
-.strip {
+.title {
     overflow: hidden;
     margin: 0px;
     font-family: 'Work Sans', sans-serif;
     font-weight: Medium;
-	font-size: 20;
+	font-size: 25px;
     padding: 30px;
 	text-align: center;
     color: #ffffff;
-    
+}
+.strip {
+    overflow: hidden;
+    margin: 0px;
+    padding: 30px;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 
@@ -50,6 +55,7 @@ body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
     background-image: url(header-image.jpg);
+    opacity: ;
 }
 p {
 	font-family: 'Roboto', sans-serif;

@@ -29,7 +29,7 @@
     
 }
 
-.strip {
+.title {
     overflow: hidden;
     margin: 0px;
     font-family: 'Work Sans', sans-serif;
@@ -38,7 +38,13 @@
     padding: 30px;
 	text-align: center;
     color: #ffffff;
-    
+}
+.strip {
+    overflow: hidden;
+    margin: 0px;
+    padding: 30px;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 
