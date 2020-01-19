@@ -47,6 +47,7 @@ a, a:visited {
     list-style-type: none;
     float: right;
     margin: 0;
+    padding: 0;
 }
 .header a, .navbar a {
     color: #ffffff;
@@ -58,6 +59,18 @@ a, a:visited {
     padding: 0 16px;
 }
 
+@media screen and (max-width: 500px) {
+    .header {
+        text-align: center;
+    }
+    .page_title { margin-bottom: 8px; }
+    .navbar li {
+        display: block;
+    }
+    .navbar, .page_title {
+        float: none;
+    }
+}
 h3 {
     font-family: 'Work Sans', sans-serif;
     font-size: 30px;
