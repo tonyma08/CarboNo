@@ -1,33 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap');
-.column {
-	float: left;
-}
-.column.left {
-    width: 75%;
-}
-.column.right {
-    width: 25%;
-}
-@media screen and (max-width: 600px) {
-	.column.left, .column.right {
-		width: 100%;
-	}
-}
-
+/* Header Bar Style */
 .header {
     overflow: hidden;
     margin: 0px;
     font-family: 'Work Sans', sans-serif;
     font-weight: Semi-Bold;
-	font-size: 30;
+	font-size: 20px;
     padding: 2px;
     padding-left: 20px;
 	background-color: #ffffff;
 	text-align: left;
     color: #000000;
-    
-    
 }
+/* Header Link Style */
 
 .title {
     overflow: hidden;
