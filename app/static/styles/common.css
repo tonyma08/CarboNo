@@ -109,5 +109,5 @@ body {
     box-shadow: 20px 10px 20px rgba(0,0,0,0.2);
 }
 .stripcentered {
-    align-content: center;
+    text-align: center;
 }
