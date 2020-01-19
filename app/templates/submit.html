@@ -1,13 +1,45 @@
 {% extends "base.html" %}
 {% block head %}
+	<script src="{{ url_for('static', filename='js/submit.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/buttonstyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/submit.css') }}">
 {% endblock %}	
 	
 {% block content %}
 <div class="title">
     <h1>Add Data Points</h1>
 </div>
-<div class = "strip">
-    <h2>What type of emission would you like to add?</h2>
+<div class="strip">
+    <h2>What type of carbon emission would you like to add?</h2>
+    <form action="" class="emission-type">
+        <label><input type="radio" name="emission-type" value="travel">Travel<br></label>
+        <label><input type="radio" name="emission-type" value="electricity">Electricity bill<br></label>
+    </form>
+    <div class="submission-form1 submission-travel">
+        <h2>When was it?</h2>
+        <form action=""><input type="date" name="travel-date"></form>
+        <h2>How did you travel?</h2>
+        <form action="" class="travel-type">
+            <label><input type="radio" name="travel-type" value="car">Car<br></label>
+            <label><input type="radio" name="travel-type" value="bus">Bus<br></label>
+            <label><input type="radio" name="travel-type" value="train">Train<br></label>
+            <label><input type="radio" name="travel-type" value="motorcycle">Motorcycle<br></label>
+            <label><input type="radio" name="travel-type" value="walking">Walking<br></label>
+            <label><input type="radio" name="travel-type" value="bike">Bike<br></label>
+            <label><input type="radio" name="travel-type" value="airplane">Airplane<br></label>
+            <label><input type="radio" name="travel-type" value="boat">Boat<br></label>            
+        </form>
+        <h2>How far did you travel?</h2>
+        <form action="" class="travel-distance">
+            <input type="number" min="0"> miles
+        </form>
+        <br>
+        <form action="">
+            <input type="Submit" value="Add trip" name="travel-submit">
+        </form>
+    </div>
+    <div class="submission-form1 submission-electricity">
+        <form action="" class="electricity-amount"></form>
+    </div>
 </div>
 {% endblock %}

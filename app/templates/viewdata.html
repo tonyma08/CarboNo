@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block head %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 	<script src="{{ url_for('static', filename='js/app.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/viewdata.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/buttonstyle.css') }}">
@@ -17,6 +18,45 @@
                     <input type="date" name="start-day">
                     <input type= "submit">
                 </form>
+                <div class="chart-container">
+                <canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['You', 'State average', 'National average'],
+        datasets: [{
+            label: 'Pounds of CO₂',
+            data: [5, 12, 19],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+myChart.maintainAspectRatio = false;
+myChart.canvas.parentNode.style.height = '400px';
+myChart.canvas.parentNode.style.width = '400px';
+</script>
+            </div>
             </div>
         
     
