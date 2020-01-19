@@ -81,6 +81,6 @@ window.onload = function() {
 	// Read order and show the next tip from there
     var tipNumber = localStorage.getItem('tip-order').split(" ")[localStorage.getItem('tip-index')];
 	tip = messages[tipNumber];
-	document.getElementsByClassName("tip-title")[0].innerHTML = tipNumber + ". " + tip[0];
+	document.getElementsByClassName("tip-title")[0].innerHTML = (tipNumber+1) + ". " + tip[0];
     document.getElementsByClassName("tip-text")[0].innerHTML = tip[1];
 };
